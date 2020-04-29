@@ -3,16 +3,26 @@ import Tab1 from './tabs/Tab1'
 import Tab2 from './tabs/Tab2'
 import Tab3 from './tabs/Tab3'
 import Tab4 from './tabs/Tab4'
+import { connect } from 'react-redux'
 
-export default class TabList extends Component {
+class TabList extends Component {
   render() {
+    const { tabs } = this.props
     return (
       <div align="right">
-        <Tab1/>
-        <Tab2/>
-        <Tab3/>
-        <Tab4/>
+        <Tab1 tab1={ tabs.tab1 }/>
+        <Tab2 tab2={ tabs.tab2 }/>
+        <Tab3 tab3={ tabs.tab3 }/>
+        <Tab4 tab4={ tabs.tab4 }/>
       </div>
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    tabs: state.tabs
+  }
+}
+
+export default connect(mapStateToProps)(TabList)
