@@ -7,13 +7,13 @@ import { connect } from 'react-redux'
 
 class TabList extends Component {
   render() {
-    const { tabs } = this.props
+    const { tabs, activeTabId } = this.props
     return (
       <div align="right">
-        <Tab1 tab1={ tabs.tab1 }/>
-        <Tab2 tab2={ tabs.tab2 }/>
-        <Tab3 tab3={ tabs.tab3 }/>
-        <Tab4 tab4={ tabs.tab4 }/>
+        { activeTabId === 1 ? <Tab1 tab1={ tabs.tab1 }/> : null }
+        { activeTabId === 2 ? <Tab2 tab2={ tabs.tab2 }/> : null }
+        { activeTabId === 3 ? <Tab3 tab3={ tabs.tab3 }/> : null }
+        { activeTabId === 4 ? <Tab4 tab4={ tabs.tab4 }/> : null }
       </div>
     )
   }
@@ -21,7 +21,8 @@ class TabList extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    tabs: state.tabs
+    tabs: state.tabs,
+    activeTabId: state.activeTabId
   }
 }
 
