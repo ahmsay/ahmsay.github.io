@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div>
       <Navbar/>
-      <Container maxWidth="sm">
+      <Container fixed>
         <TabList/>
       </Container>
     </div>

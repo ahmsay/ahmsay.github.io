@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   title: { flexGrow: 1 }
 }))
 
-function Navbar() {
+export default function Navbar() {
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -29,5 +29,3 @@ function Navbar() {
     </div>
   );
 }
-
-export default Navbar;

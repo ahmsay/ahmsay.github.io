@@ -7,7 +7,7 @@ import Tab4 from './tabs/Tab4'
 export default class TabList extends Component {
   render() {
     return (
-      <div>
+      <div align="right">
         <Tab1/>
         <Tab2/>
         <Tab3/>
