@@ -7,9 +7,8 @@ import { connect } from 'react-redux'
 import { changeActiveTab } from '../actions/tabActions'
 import { withStyles } from '@material-ui/core/styles'
 
-const useStyles = (theme) => ({
+const useStyles = () => ({
   root: { flexGrow: 1 },
-  menuButton: { marginRight: theme.spacing(2) },
   title: { flexGrow: 1 }
 })
 
@@ -18,7 +17,10 @@ class Navbar extends Component {
     this.props.changeTab(id)
   }
   render() {
-    const { classes } = this.props
+    const { classes, tabs } = this.props
+    const buttons = tabs.map(tab => {
+      return <Button key={ tab.id } onClick={ () => this.changeTab(tab.id) } color="inherit">{ tab.title }</Button>
+    })
     return (
       <div className={ classes.root }>
         <AppBar position="static">
@@ -26,15 +28,16 @@ class Navbar extends Component {
             <Typography variant="h6" className={ classes.title }>
               This site is under construction.
             </Typography>
-            <Button onClick={ () => this.changeTab(1) } color="inherit">Tab1</Button>
-            <Button onClick={ () => this.changeTab(2) } color="inherit">Tab2</Button>
-            <Button onClick={ () => this.changeTab(3) } color="inherit">Tab3</Button>
-            <Button onClick={ () => this.changeTab(4) } color="inherit">Tab4</Button>
+            { buttons }
           </Toolbar>
         </AppBar>
       </div>
     )
   }
+}
+
+const mapStateToProps = (state) => {
+  return { tabs: state.tabs }
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -45,4 +48,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(withStyles(useStyles)(Navbar))
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(useStyles)(Navbar))

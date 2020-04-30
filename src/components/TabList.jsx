@@ -10,10 +10,10 @@ class TabList extends Component {
     const { tabs, activeTabId } = this.props
     return (
       <div align="right">
-        { activeTabId === 1 ? <Tab1 tab1={ tabs.tab1 }/> : null }
-        { activeTabId === 2 ? <Tab2 tab2={ tabs.tab2 }/> : null }
-        { activeTabId === 3 ? <Tab3 tab3={ tabs.tab3 }/> : null }
-        { activeTabId === 4 ? <Tab4 tab4={ tabs.tab4 }/> : null }
+        { activeTabId === tabs[0].id ? <Tab1 tab1={ tabs[0] }/> : null }
+        { activeTabId === tabs[1].id ? <Tab2 tab2={ tabs[1] }/> : null }
+        { activeTabId === tabs[2].id ? <Tab3 tab3={ tabs[2] }/> : null }
+        { activeTabId === tabs[3].id ? <Tab4 tab4={ tabs[3] }/> : null }
       </div>
     )
   }

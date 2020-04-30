@@ -1,11 +1,11 @@
 const initState = {
   activeTabId: 1,
-  tabs: {
-    tab1: { id: 1, title: 'tab 1 title', content: 'tab 1 content', moreContent: 'tab 1 more content' },
-    tab2: { id: 2, title: 'tab 2 title', content: 'tab 2 content', icons: [1,2,3] },
-    tab3: { id: 3, title: 'tab 3 title', content: 'tab 3 content' },
-    tab4: { id: 4, title: 'tab 4 title', content: 'tab 4 content' }
-  }
+  tabs: [
+    { id: 1, title: 'tab 1', body: { content: 'tab 1 content', moreContent: 'tab 1 more content', values: [1, 2, 3] }},
+    { id: 2, title: 'tab 2', body: { content: 'tab 2 content', moreContent: 'tab 2 more content' }},
+    { id: 3, title: 'tab 3', body: { content: 'tab 3 content' }},
+    { id: 4, title: 'tab 4', body: { }}
+  ]
 }
 
 const rootReducer = (state = initState, action) => {
