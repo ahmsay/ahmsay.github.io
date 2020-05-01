@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export default function Tab4() {
+const Projects = () => {
   const classes = useStyles();
   return (
     <List component="nav" className={classes.root} aria-label="contacts">
@@ -33,3 +33,5 @@ export default function Tab4() {
     </List>
   )
 }
+
+export default Projects

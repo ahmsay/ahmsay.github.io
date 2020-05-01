@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   }
 })
 
-export default function Tab3() {
+const Hometown = () => {
   const classes = useStyles()
   return (
     <Card className={classes.root}>
@@ -46,3 +46,5 @@ export default function Tab3() {
     </Card>
   )
 }
+
+export default Hometown

@@ -17,7 +17,7 @@ const Hobbies = ({ tab }) => {
   const classes = useStyles()
   const hobbies = tab.card.body.map(hobby => {
     return (
-      <Card className={classes.root}>
+      <Card key={ hobby.title } className={classes.root}>
         <CardContent>
           <Typography variant="subheading1" component="h3">
             { hobby.title }
