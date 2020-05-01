@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Tab1 from './tabs/Tab1'
-import Tab2 from './tabs/Tab2'
-import Tab3 from './tabs/Tab3'
-import Tab4 from './tabs/Tab4'
+import About from './tabs/About'
+import Hobbies from './tabs/Hobbies'
+import Hometown from './tabs/Hometown'
+import Projects from './tabs/Projects'
 import { connect } from 'react-redux'
 
 class TabList extends Component {
@@ -10,10 +10,10 @@ class TabList extends Component {
     const { tabs, activeTabId } = this.props
     return (
       <div align="right">
-        { activeTabId === tabs[0].id ? <Tab1 tab1={ tabs[0] }/> : null }
-        { activeTabId === tabs[1].id ? <Tab2 tab2={ tabs[1] }/> : null }
-        { activeTabId === tabs[2].id ? <Tab3 tab3={ tabs[2] }/> : null }
-        { activeTabId === tabs[3].id ? <Tab4 tab4={ tabs[3] }/> : null }
+        { activeTabId === tabs[0].id ? <About tab={ tabs[0] }/> : null }
+        { activeTabId === tabs[1].id ? <Hobbies tab={ tabs[1] }/> : null }
+        { activeTabId === tabs[2].id ? <Hometown tab={ tabs[2] }/> : null }
+        { activeTabId === tabs[3].id ? <Projects tab={ tabs[3] }/> : null }
       </div>
     )
   }
