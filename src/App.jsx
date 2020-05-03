@@ -12,7 +12,6 @@ const theme = createMuiTheme({
   },
   button: {
     color: '#ffffff',
-    borderRadius: 50,
     textTransform: 'none',
     paddingLeft: 12,
     paddingRight: 12

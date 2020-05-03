@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { changeActiveTab } from '../actions/tabActions'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import ButtonGroup from '@material-ui/core/ButtonGroup'
 
 const useStyles = () => ({
   title: {
@@ -36,14 +37,14 @@ class Navbar extends Component {
       )
     })
     return (
-      <div>
-        <AppBar position="static" color="transparent" style={{ boxShadow: 'none' }}>
-          <Toolbar className={ classes.toolBar }>
-            <div className={ classes.title }/>
+      <AppBar position="static" color="transparent" style={{ boxShadow: 'none' }}>
+        <Toolbar className={ classes.toolBar }>
+          <div className={ classes.title }/>
+          <ButtonGroup variant="text">
             { buttons }
-          </Toolbar>
-        </AppBar>
-      </div>
+          </ButtonGroup>
+        </Toolbar>
+      </AppBar>
     )
   }
 }
