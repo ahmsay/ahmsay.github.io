@@ -2,18 +2,16 @@ import React, { Component } from 'react'
 import Navbar from './components/Navbar'
 import TabList from './components/TabList'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import { deepPurple } from '@material-ui/core/colors'
 
 const theme = createMuiTheme({
   card: {
     borderWidth: 0,
-    borderRadius: 0,
-    background: '#00003366',
+    background: 'linear-gradient(45deg, #538699dd 30%, #b1755bdd 70%)',
     color: '#ffffff',
     padding: 7
   },
   button: {
-    color: deepPurple[500],
+    color: '#ffffff',
     borderRadius: 50,
     textTransform: 'none',
     paddingLeft: 12,
