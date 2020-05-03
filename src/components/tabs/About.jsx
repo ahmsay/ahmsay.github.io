@@ -4,37 +4,40 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275
-  },
-  title: {
-    fontSize: 14
-  }
-})
+const useStyles = makeStyles((theme) => ({
+  card: theme.card
+}))
 
 const About = ({ tab }) => {
   const classes = useStyles()
   return (
-    <Card className={classes.root}>
+    <Card className={classes.card} variant="outlined">
       <CardContent>
         <Typography variant="h5" component="h2">
           { tab.card.title }
-        </Typography>
+        </Typography><br/>
         <Typography variant="body2" component="p">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit rerum. Quis error labore nihil numquam in perferendis incidunt veniam facere assumenda, facilis distinctio, beatae minima tempora magnam reprehenderit?
-        </Typography>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit rerum. Quis error labore nihil numquam in perferendis incidunt veniam facere assumenda, facilis distinctio
+        </Typography><br/>
         <Typography variant="subtitle1" component="h2">
-          { tab.card.title }
+          Lorem Ipsum
         </Typography>
         <Typography variant="body2" component="p">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit rerum. Quis error labore nihil numquam in perferendis incidunt veniam facere assumenda, facilis distinctio, beatae minima tempora magnam reprehenderit?
-        </Typography>
+        </Typography><br/>
         <Typography variant="subtitle1" component="h2">
-          { tab.card.title }
+          Dolor sit
         </Typography>
         <Typography variant="body2" component="p">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam reprehenderit rerum. Quis error labore nihil numquam in perferendis incidunt veniam facere assumenda, facilis distinctio, beatae minima tempora magnam reprehenderit?
+        </Typography><br/>
+        <Typography variant="body1">
+          <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Ipsum lorem sit</li>
+            <li>Dolor</li>
+            <li>Lorem dolor sit ipsum</li>
+          </ul>
         </Typography>
       </CardContent>
     </Card>

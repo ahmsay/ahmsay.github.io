@@ -5,10 +5,9 @@ import Button from '@material-ui/core/Button'
 import { connect } from 'react-redux'
 import { changeActiveTab } from '../actions/tabActions'
 import { withStyles } from '@material-ui/core/styles'
-import { deepPurple } from '@material-ui/core/colors'
 import Typography from '@material-ui/core/Typography'
 
-const useStyles = (theme) => ({
+const useStyles = () => ({
   title: {
     flexGrow: 1
   },
@@ -18,13 +17,7 @@ const useStyles = (theme) => ({
 })
 
 const CustomButton = withStyles((theme) => ({
-  root: {
-    color: deepPurple[500],
-    borderRadius: 50,
-    textTransform: 'none',
-    paddingRight: theme.spacing(2),
-    paddingLeft: theme.spacing(2)
-  }
+  root: theme.button
 }))(Button)
 
 class Navbar extends Component {
@@ -36,7 +29,7 @@ class Navbar extends Component {
     const buttons = tabs.map(tab => {
       return (
         <CustomButton key={ tab.id } onClick={ () => this.changeTab(tab.id) }>
-          <Typography>
+          <Typography variant="subtitle1">
             { tab.title }
           </Typography>
         </CustomButton>
