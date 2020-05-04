@@ -12,9 +12,9 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const About = ({ tab }) => {
+const About = ({ card }) => {
   const classes = useStyles()
-  const { mainTitle, mainContent, section1, section2, section3 } = tab.card
+  const { mainTitle, mainContent, section1, section2, section3 } = card
   const links = section3.links.map(link => {
     return (
       <li key={ link.name }>

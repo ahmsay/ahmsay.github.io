@@ -14,10 +14,10 @@ class TabList extends Component {
       <Grid container justify="flex-end">
         <Grid item xs={12} sm={8} md={5}>
           <Box pr={8}>
-            { activeTabId === tabs[0].id ? <About tab={ tabs[0] }/> : null }
-            { activeTabId === tabs[1].id ? <Hobbies tab={ tabs[1] }/> : null }
-            { activeTabId === tabs[2].id ? <Hometown tab={ tabs[2] }/> : null }
-            { activeTabId === tabs[3].id ? <Projects tab={ tabs[3] }/> : null }
+            { activeTabId === tabs[0].id ? <About card={ tabs[0].card }/> : null }
+            { activeTabId === tabs[1].id ? <Hobbies card={ tabs[1].card }/> : null }
+            { activeTabId === tabs[2].id ? <Hometown card={ tabs[2].card }/> : null }
+            { activeTabId === tabs[3].id ? <Projects card={ tabs[3].card }/> : null }
           </Box>
         </Grid>
       </Grid>
