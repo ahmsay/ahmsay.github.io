@@ -3,30 +3,46 @@ import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
+import Icon from '@material-ui/core/Icon'
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles((theme) => ({
   card: theme.card
 }))
 
-const Hobbies = ({ tab }) => {
+const Hobbies = ({ card }) => {
   const classes = useStyles()
-  const hobbies = tab.card.body.map(hobby => {
+  const hobbies = card.hobbies.map((hobby, index) => {
+    let hobbyIcon = (
+      <Grid item xs={3}>
+        <Grid container justify="center">
+          <Icon style={{ fontSize: 60, marginRight: 18 }}>{ hobby.icon }</Icon>
+        </Grid>
+      </Grid>
+    )
+    let hobbyContent = (
+      <Grid item xs={9}>
+        <Typography variant="body2">
+          { hobby.content }
+        </Typography>
+      </Grid>
+    )
     return (
       <div key={ hobby.title }>
-        <Typography variant="subheading1" component="h3">
-          { hobby.title }
-        </Typography>
-        <Typography variant="body2" component="p">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias cum suscipit ducimus, perspiciatis ipsa eum architecto minus mollitia tempore a doloremque, non provident at id quasi corrupti sit inventore.
-        </Typography>
+        <Grid container alignItems="center">
+          { index %2 === 0 ? null : hobbyIcon }
+          { hobbyContent }
+          { index %2 === 0 ? hobbyIcon : null }
+        </Grid>
+        <br/>
       </div>
     )
   })
   return (
     <Card className={classes.card} variant="outlined">
       <CardContent>
-        <Typography variant="h5" component="h2">
-          { tab.card.title }
+        <Typography variant="h5">
+          { card.title }
         </Typography><br/>
         { hobbies }
       </CardContent>
