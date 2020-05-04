@@ -28,7 +28,7 @@ const Hobbies = ({ card }) => {
       </Grid>
     )
     return (
-      <div key={ hobby.title }>
+      <div key={ index }>
         <Grid container alignItems="center">
           { contentAtLeft ? null : hobbyIcon }
           { hobbyContent }
