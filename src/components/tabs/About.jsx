@@ -25,7 +25,7 @@ const About = ({ card }) => {
     )
   })
   return (
-    <Card className={ classes.card } variant="outlined">
+    <Card className={ classes.card } variant="outlined" align="justify">
       <CardContent>
         <Typography variant="h5">{ mainTitle }</Typography><br/>
         <Typography variant="body2">{ mainContent }</Typography><br/>
@@ -34,7 +34,7 @@ const About = ({ card }) => {
         <Typography variant="subtitle1">{ section2.title }</Typography>
         <Typography variant="body2">{ section2.content }</Typography><br/>
         <Typography variant="subtitle1">{ section3.title }</Typography>
-        <ul>{ links }</ul>
+        <ul style={{ marginBottom: 0 }}>{ links }</ul>
       </CardContent>
     </Card>
   )

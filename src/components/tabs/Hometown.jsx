@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 const Hometown = () => {
   const classes = useStyles()
   return (
-    <Card className={ classes.card } variant="outlined">
+    <Card className={ classes.card } variant="outlined" align="justify">
       <CardActionArea>
         <CardMedia
           component="img"

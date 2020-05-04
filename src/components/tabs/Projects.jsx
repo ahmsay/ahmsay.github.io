@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 const Projects = () => {
   const classes = useStyles();
   return (
-    <Card className={ classes.card } variant="outlined">
+    <Card className={ classes.card } variant="outlined" align="justify">
       <CardContent>
         <List component="nav" aria-label="contacts">
           <ListItem button>
