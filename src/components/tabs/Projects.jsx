@@ -1,12 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import StarIcon from '@material-ui/icons/Star'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
+import { List, ListItem, ListItemIcon, ListItemText, Card, CardContent, Icon } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   card: theme.card
@@ -20,13 +14,13 @@ const Projects = () => {
         <List component="nav" aria-label="contacts">
           <ListItem button>
             <ListItemIcon>
-              <StarIcon />
+            <Icon>star</Icon>
             </ListItemIcon>
             <ListItemText primary="Churnify" />
           </ListItem>
           <ListItem button>
             <ListItemIcon>
-              <StarIcon />
+              <Icon>star</Icon>
             </ListItemIcon>
             <ListItemText primary="Star Wars Quick Guide" />
           </ListItem>

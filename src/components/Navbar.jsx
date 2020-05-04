@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Button from '@material-ui/core/Button'
+import { AppBar, Toolbar, Button, Typography, ButtonGroup } from '@material-ui/core'
 import { connect } from 'react-redux'
 import { changeActiveTab } from '../actions/tabActions'
 import { withStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import ButtonGroup from '@material-ui/core/ButtonGroup'
 
 const useStyles = () => ({
   title: {

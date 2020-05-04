@@ -4,8 +4,7 @@ import Hobbies from './tabs/Hobbies'
 import Hometown from './tabs/Hometown'
 import Projects from './tabs/Projects'
 import { connect } from 'react-redux'
-import Grid from '@material-ui/core/Grid'
-import Box from '@material-ui/core/Box'
+import { Grid, Box } from '@material-ui/core'
 
 class TabList extends Component {
   render() {
