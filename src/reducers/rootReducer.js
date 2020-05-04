@@ -1,5 +1,5 @@
 const initState = {
-  activeTabId: 1,
+  activeTabId: 3,
   tabs: [
     {
       id: 1,
