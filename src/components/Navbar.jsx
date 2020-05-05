@@ -22,10 +22,11 @@ class Navbar extends Component {
     this.props.changeTab(id)
   }
   render() {
-    const { classes, tabs } = this.props
+    const { classes, tabs, activeTabId } = this.props
     const buttons = tabs.map(tab => {
+      const highLight = tab.id === activeTabId ? { backgroundColor: '#fff2' } : {}
       return (
-        <CustomButton key={ tab.id } onClick={ () => this.changeTab(tab.id) }>
+        <CustomButton key={ tab.id } onClick={ () => this.changeTab(tab.id) } style={ highLight }>
           <Typography variant="subtitle1">
             { tab.title }
           </Typography>
@@ -46,7 +47,10 @@ class Navbar extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return { tabs: state.tabs }
+  return {
+    tabs: state.tabs,
+    activeTabId: state.activeTabId
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
