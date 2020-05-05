@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import { ExpansionPanelActions, Button, Card, CardContent, Typography } from '@material-ui/core'
+import { CardActions, ExpansionPanelActions, Button, Card, CardContent, Typography } from '@material-ui/core'
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel'
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
@@ -92,6 +92,9 @@ class Projects extends Component {
           <Typography variant="h5">{ mainTitle }</Typography><br/>
           { projectList }
         </CardContent>
+        <CardActions style={{ paddingTop: 0 }}>
+          <Button onClick={ () => { window.open( "https://github.com/ahmsay?tab=repositories", "_blank") } } style={{ color: '#ffffff', marginLeft: 4 }} size="small">See Other Projects</Button>
+        </CardActions>
       </Card>
     )
   }
