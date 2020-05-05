@@ -1,5 +1,5 @@
 const initState = {
-  activeTabId: 1,
+  activeTabId: 4,
   tabs: [
     {
       id: 1,
@@ -50,8 +50,18 @@ const initState = {
     {
       id: 4,
       title: 'Projects',
-      body: {
-
+      card: {
+        mainTitle: 'My Projects',
+        projects: [
+          {
+            title: 'project 1',
+            detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.'
+          },
+          {
+            title: 'project 2',
+            detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.'
+          }
+        ]
       }
     }
   ]
