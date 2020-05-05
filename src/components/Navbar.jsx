@@ -6,7 +6,8 @@ import { withStyles } from '@material-ui/core/styles'
 
 const useStyles = () => ({
   toolBar: {
-    minHeight: 75
+    minHeight: 75,
+    paddingLeft: 0
   }
 })
 
