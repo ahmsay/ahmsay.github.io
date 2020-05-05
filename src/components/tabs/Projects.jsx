@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import { Card, CardContent, Typography } from '@material-ui/core'
+import { ExpansionPanelActions, Button, Card, CardContent, Typography } from '@material-ui/core'
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel'
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
 const useStyles = (theme) => ({
   card: theme.card
@@ -69,14 +70,19 @@ class Projects extends Component {
     const projectList = projects.map((project, index) => {
       return (
         <ExpansionPanel key={ index } square expanded={ this.state.expandedPanelIndex === index && this.state.newExpanded } onChange={ handleChange(index) }>
-          <ExpansionPanelSummary>
-            <Typography>{ project.title }</Typography>
+          <ExpansionPanelSummary expandIcon={ <ExpandMoreIcon style={{ color: '#fff' }}/> }>
+            <Typography variant="subtitle1">
+              { project.title }
+            </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>
+            <Typography variant="body2">
               { project.detail }
             </Typography>
           </ExpansionPanelDetails>
+          <ExpansionPanelActions style={{ paddingTop: 0 }}>
+            <Button onClick={ () => { window.open( project.link, "_blank") } } style={{ color: '#ffffff' }} size="small">More</Button>
+          </ExpansionPanelActions>
         </ExpansionPanel>
       )
     })
