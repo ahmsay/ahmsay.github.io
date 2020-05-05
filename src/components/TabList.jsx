@@ -10,7 +10,7 @@ class TabList extends Component {
   render() {
     const { tabs, activeTabId } = this.props
     return (
-      <Grid container justify="flex-end">
+      <Grid container>
         <Grid item xs={12} sm={8} md={5}>
           <Box pr={8}>
             { activeTabId === tabs[0].id ? <About card={ tabs[0].card }/> : null }

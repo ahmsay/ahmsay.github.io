@@ -6,7 +6,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 const theme = createMuiTheme({
   card: {
     borderWidth: 0,
-    background: 'linear-gradient(45deg, #538699dd 30%, #b1755bdd 70%)',
+    background: 'linear-gradient(-45deg, #538699dd 30%, #b1755bdd 70%)',
     color: '#ffffff',
     padding: 7
   },

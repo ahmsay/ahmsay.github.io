@@ -5,9 +5,6 @@ import { changeActiveTab } from '../actions/tabActions'
 import { withStyles } from '@material-ui/core/styles'
 
 const useStyles = () => ({
-  title: {
-    flexGrow: 1
-  },
   toolBar: {
     minHeight: 75
   }
@@ -36,7 +33,6 @@ class Navbar extends Component {
     return (
       <AppBar position="static" color="transparent" style={{ boxShadow: 'none' }}>
         <Toolbar className={ classes.toolBar }>
-          <div className={ classes.title }/>
           <ButtonGroup variant="text">
             { buttons }
           </ButtonGroup>
