@@ -1,5 +1,5 @@
 const initState = {
-  activeTabId: 3,
+  activeTabId: 1,
   tabs: [
     {
       id: 1,
@@ -41,8 +41,10 @@ const initState = {
     {
       id: 3,
       title: 'Hometown',
-      body: {
-        content: 'tab 3 content'
+      card: {
+        title: 'Eskişehir',
+        content: 'Eskişehir is a city in northwestern Turkey. The city is located on the banks of the Porsuk River, 792 m above sea level, where it overlooks the fertile Phrygian Valley. In the nearby hills you can find hot springs. Known as a university town, both Eskişehir Osmangazi University and Anadolu University (which has one of the largest student enrollments in the world) are based in Eskişehir.',
+        source: 'https://en.wikipedia.org/wiki/Eski%C5%9Fehir'
       }
     },
     {

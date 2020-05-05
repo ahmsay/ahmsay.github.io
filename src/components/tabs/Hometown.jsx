@@ -1,24 +1,27 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Card, CardContent, CardMedia, Typography } from '@material-ui/core'
+import { Button, CardActions, Card, CardContent, CardMedia, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   card: theme.card
 }))
 
-const Hometown = () => {
+const Hometown = ({ card }) => {
   const classes = useStyles()
   return (
     <Card className={ classes.card } variant="outlined" align="justify">
-      <CardMedia component="img" alt="Eskişehir" height="250" image="/static/images/cards/eskisehir.jpg" title="Eskişehir"/>
+      <CardMedia title="Porsuk River, Eskişehir" style={{ height: 0, paddingTop: '55%' }} image={ require('../../images/eskisehir.jpg') }/>
       <CardContent>
-        <Typography gutterBottom variant="subtitle1">
-          Eskişehir
+        <Typography variant="subtitle1">
+          { card.title }
         </Typography>
         <Typography variant="body2">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium quasi, sapiente, repellendus iste natus officiis ipsa, ad ipsam sunt placeat voluptatem? Natus, magni. Vero labore quaerat assumenda consequatur nostrum hic!
+          { card.content }
         </Typography>
       </CardContent>
+      <CardActions style={{ paddingTop: 0 }}>
+        <Button onClick={ () => { window.open( card.source, "_blank") } } style={{ color: '#ffffff' }} size="small">Learn More</Button>
+      </CardActions>
     </Card>
   )
 }
