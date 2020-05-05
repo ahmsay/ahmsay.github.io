@@ -1,5 +1,5 @@
 const initState = {
-  activeTabId: 4,
+  activeTabId: 1,
   tabs: [
     {
       id: 1,
@@ -54,12 +54,24 @@ const initState = {
         mainTitle: 'My Projects',
         projects: [
           {
-            title: 'project 1',
-            detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.'
+            title: 'Churnify',
+            detail: "This is a churn analysis automation tool. Churn refers to customer's turnover rate. Predicting which customer is going to leave the company is known as 'Churn Analysis'. So the aim is to predict which customer is going to leave the company and take precautions about it. The motivation is to automatize this process.",
+            link: 'https://churn-2537f.firebaseapp.com/'
           },
           {
-            title: 'project 2',
-            detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.'
+            title: 'Star Wars Quick Guide',
+            detail: "This mobile application provides information about movies, characters, planets, species, starships and vehicles in Star Wars legend universe. It is built with Xamarin Forms.",
+            link: 'https://github.com/ahmsay/Star-Wars-Quick-Guide'
+          },
+          {
+            title: 'Spring Boot Microservices',
+            detail: "This demo project contains basic concepts about microservices architecture like communication, service discovery, fault tolerance, resilience and configuration.",
+            link: 'https://github.com/ahmsay/Spring-Boot-Microservices'
+          },
+          {
+            title: 'Number Guess',
+            detail: "This simple application provides you an interface to draw a number. Then if you click 'Predict', it sends the number you draw to a pre-trained machine learning model to predict which number it is. I hope you get the correct result when you try.",
+            link: 'https://numberguess-47e1d.firebaseapp.com/'
           }
         ]
       }
