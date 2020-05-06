@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { AppBar, Toolbar, Button, Typography, ButtonGroup } from '@material-ui/core'
 import { connect } from 'react-redux'
-import { changeActiveTab } from '../actions/tabActions'
 import { withStyles } from '@material-ui/core/styles'
 
 const useStyles = () => ({
@@ -53,7 +52,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     changeTab: (id) => {
-      dispatch(changeActiveTab(id))
+      dispatch({type: 'CHANGE_ACTIVE_TAB', id})
     }
   }
 }
