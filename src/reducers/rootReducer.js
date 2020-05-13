@@ -71,7 +71,7 @@ const initState = {
           {
             title: 'Number Guess',
             detail: "This simple application provides you an interface to draw a number. Then if you click 'Predict', it sends the number you draw to a pre-trained machine learning model to predict which number it is. I hope you get the correct result when you try.",
-            link: 'https://numberguess-47e1d.firebaseapp.com/'
+            link: 'https://number-guess-conv.web.app/'
           }
         ]
       }
