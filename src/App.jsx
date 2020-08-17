@@ -23,10 +23,7 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={ theme }>
-        <Container fixed>
-        <Navbar/>
-        <TabList/>
-        </Container>
+        This site is under construction :')
         
       </MuiThemeProvider>
     )
