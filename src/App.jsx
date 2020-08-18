@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import Navbar from './components/Navbar'
-import TabList from './components/TabList'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { Container } from '@material-ui/core'
+import Greetings from './components/Greetings'
 
 const theme = createMuiTheme({
   card: {
@@ -23,8 +22,9 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={ theme }>
-        This site is under construction :')
-        
+        <Container fixed>
+          <Greetings/>
+        </Container>
       </MuiThemeProvider>
     )
   }
