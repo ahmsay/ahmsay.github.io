@@ -3,23 +3,23 @@ import React, { Component } from 'react'
 class Greetings extends Component {
   constructor() {
     super();
-    this.state = {asd: 'lol'};
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.state = {}
+    this.updateWindowHeight = this.updateWindowHeight.bind(this);
   }
   componentDidMount() {
-      this.updateWindowDimensions();
-      window.addEventListener("resize", this.updateWindowDimensions.bind(this));
+      this.updateWindowHeight();
+      window.addEventListener("resize", this.updateWindowHeight.bind(this));
   }
   componentWillUnmount() {
-      window.removeEventListener("resize", this.updateWindowDimensions.bind(this));
+      window.removeEventListener("resize", this.updateWindowHeight.bind(this));
   }
-  updateWindowDimensions() {
-      this.setState({width: window.innerWidth, height: window.innerHeight });
+  updateWindowHeight() {
+      this.setState({ height: window.innerHeight });
   }
   render() {
     return (
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: this.state.height}}>
-        Hello there<br/>
+        Hello there
       </div>
     )
   }
