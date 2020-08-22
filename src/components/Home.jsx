@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import About from './tabs/About'
 
-class MainContent extends Component {
+class Home extends Component {
   render() {
     const { tabs } = this.props
     return (
@@ -19,4 +19,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(MainContent)
+export default connect(mapStateToProps)(Home)
