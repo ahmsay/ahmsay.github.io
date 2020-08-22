@@ -6,12 +6,12 @@ import Projects from './tabs/Projects'
 
 class Home extends Component {
   render() {
-    const { tabs } = this.props
+    const { sections } = this.props
     return (
       <div>
-        <About card={ tabs[0].card }/>
-        <Hobbies card={ tabs[1].card }/>
-        <Projects card={ tabs[3].card }/>
+        <About aboutContent={ sections.about }/>
+        <Hobbies hobbiesContent={ sections.hobbies }/>
+        <Projects projectsContent={ sections.projects }/>
       </div>
     )
   }
@@ -19,7 +19,7 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    tabs: state.tabs
+    sections: state.sections
   }
 }
 

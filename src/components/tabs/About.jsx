@@ -9,10 +9,10 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const About = ({ card }) => {
+const About = ({ aboutContent }) => {
   const classes = useStyles()
-  const { mainTitle, mainContent, section1, section2, section3 } = card
-  const links = section3.links.map(link => {
+  const { mainTitle, mainContent, whatElse, developerMessage, forMore } = aboutContent
+  const links = forMore.links.map(link => {
     return (
       <li key={ link.name }>
         <Link href={ link.href } target="_blank" rel="noopener" className={ classes.link }>
@@ -26,14 +26,14 @@ const About = ({ card }) => {
       <CardContent>
         <Typography variant="h5">{ mainTitle }</Typography><br/>
         <Typography variant="body2">{ mainContent }</Typography><br/>
-        <Typography variant="subtitle1">{ section1.title }</Typography>
-        <Typography variant="body2">{ section1.content }</Typography><br/>
-        <Typography variant="subtitle1">{ section2.title }</Typography>
-        <Typography variant="body2">{ section2.content }</Typography><br/>
-        <Typography variant="subtitle1">{ section3.title }</Typography>
+        <Typography variant="subtitle1">{ whatElse.title }</Typography>
+        <Typography variant="body2">{ whatElse.content }</Typography><br/>
+        <Typography variant="subtitle1">{ developerMessage.title }</Typography>
+        <Typography variant="body2">{ developerMessage.content }</Typography><br/>
+        <Typography variant="subtitle1">{ forMore.title }</Typography>
         <ul style={{ marginBottom: 0 }}>{ links }</ul>
       </CardContent>
-    </Card>
+  </Card>
   )
 }
 

@@ -6,13 +6,14 @@ const useStyles = makeStyles((theme) => ({
   card: theme.card
 }))
 
-const Hobbies = ({ card }) => {
+const Hobbies = ({ hobbiesContent }) => {
   const classes = useStyles()
-  const hobbies = card.hobbies.map((hobby, index) => {
+  const { mainTitle, hobbyList } = hobbiesContent
+  const hobbies = hobbyList.map((hobby, index) => {
     let contentAtLeft = index %2 === 0
     let marginLeft = contentAtLeft ? 18 : 0
     let marginRight = contentAtLeft ? 0 : 18
-    let endOfItems = index === card.hobbies.length - 1
+    let endOfItems = index === hobbyList.length - 1
     let hobbyIcon = (
       <Grid item xs={3}>
         <Grid container justify="center">
@@ -42,7 +43,7 @@ const Hobbies = ({ card }) => {
     <Card className={ classes.card } variant="outlined" align="justify">
       <CardContent>
         <Typography variant="h5">
-          { card.title }
+          { mainTitle }
         </Typography><br/>
         { hobbies }
       </CardContent>

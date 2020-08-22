@@ -60,14 +60,14 @@ class Projects extends Component {
   }
   render() {
     const { classes } = this.props
-    const { mainTitle, projects } = this.props.card
+    const { mainTitle, projectList } = this.props.projectsContent
     const handleChange = (index) => (event, newExpanded) => {
       this.setState({
         expandedPanelIndex: index,
         newExpanded
       })
     }
-    const projectList = projects.map((project, index) => {
+    const projectListProcessed = projectList.map((project, index) => {
       return (
         <ExpansionPanel key={ index } square expanded={ this.state.expandedPanelIndex === index && this.state.newExpanded } onChange={ handleChange(index) }>
           <ExpansionPanelSummary expandIcon={ <ExpandMoreIcon style={{ color: '#fff' }}/> }>
@@ -90,7 +90,7 @@ class Projects extends Component {
       <Card className={ classes.card } variant="outlined" align="justify">
         <CardContent>
           <Typography variant="h5">{ mainTitle }</Typography><br/>
-          { projectList }
+          { projectListProcessed }
         </CardContent>
         <CardActions style={{ paddingTop: 0 }}>
           <Button onClick={ () => { window.open( "https://github.com/ahmsay?tab=repositories", "_blank") } } style={{ color: '#ffffff', marginLeft: 4 }} size="small">See Other Projects</Button>
