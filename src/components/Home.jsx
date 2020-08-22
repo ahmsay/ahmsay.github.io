@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import About from './tabs/About'
+import Hobbies from './tabs/Hobbies'
+import Projects from './tabs/Projects'
 
 class Home extends Component {
   render() {
@@ -8,6 +10,8 @@ class Home extends Component {
     return (
       <div>
         <About card={ tabs[0].card }/>
+        <Hobbies card={ tabs[1].card }/>
+        <Projects card={ tabs[3].card }/>
       </div>
     )
   }
