@@ -6,16 +6,18 @@ import Home from './components/Home'
 
 const theme = createMuiTheme({
   card: {
+    borderRadius: 0,
+    background: '#fff',
     borderWidth: 0,
-    background: 'linear-gradient(45deg, #538699dd 30%, #b1755bdd 70%)',
-    color: '#ffffff',
-    padding: 7
+    padding: 7,
+  },
+  link: {
+    color: '#000'
   },
   button: {
-    color: '#ffffff',
     textTransform: 'none',
     paddingLeft: 12,
-    paddingRight: 12
+    paddingRight: 12 
   },
   greetings: {
     display: 'flex',

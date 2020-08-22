@@ -13,7 +13,7 @@ const useStyles = (theme) => ({
 const ExpansionPanel = withStyles({
   root: {
     backgroundColor: '#0001',
-    color: '#fff',
+    color: '#000',
     border: '1px solid rgba(0, 0, 0, .125)',
     boxShadow: 'none',
     '&:not(:last-child)': {
@@ -70,7 +70,7 @@ class Projects extends Component {
     const projectListProcessed = projectList.map((project, index) => {
       return (
         <ExpansionPanel key={ index } square expanded={ this.state.expandedPanelIndex === index && this.state.newExpanded } onChange={ handleChange(index) }>
-          <ExpansionPanelSummary expandIcon={ <ExpandMoreIcon style={{ color: '#fff' }}/> }>
+          <ExpansionPanelSummary expandIcon={ <ExpandMoreIcon style={{ color: '#000' }}/> }>
             <Typography variant="subtitle1">
               { project.title }
             </Typography>
@@ -81,7 +81,7 @@ class Projects extends Component {
             </Typography>
           </ExpansionPanelDetails>
           <ExpansionPanelActions style={{ paddingTop: 0 }}>
-            <Button onClick={ () => { window.open( project.link, "_blank") } } style={{ color: '#ffffff' }} size="small">More</Button>
+            <Button onClick={ () => { window.open( project.link, "_blank") } } size="small">More</Button>
           </ExpansionPanelActions>
         </ExpansionPanel>
       )
@@ -93,7 +93,7 @@ class Projects extends Component {
           { projectListProcessed }
         </CardContent>
         <CardActions style={{ paddingTop: 0 }}>
-          <Button onClick={ () => { window.open( "https://github.com/ahmsay?tab=repositories", "_blank") } } style={{ color: '#ffffff', marginLeft: 4 }} size="small">See Other Projects</Button>
+          <Button onClick={ () => { window.open( "https://github.com/ahmsay?tab=repositories", "_blank") } } style={{ marginLeft: 4 }} size="small">See Other Projects</Button>
         </CardActions>
       </Card>
     )

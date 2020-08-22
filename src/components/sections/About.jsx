@@ -4,9 +4,7 @@ import { Card, CardContent, Typography, Link } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   card: theme.card,
-  link: {
-    color: '#ffffff'
-  }
+  link: theme.link
 }))
 
 const About = ({ aboutContent }) => {
