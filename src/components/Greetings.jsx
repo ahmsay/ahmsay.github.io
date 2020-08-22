@@ -18,7 +18,14 @@ class Greetings extends Component {
   }
   render() {
     return (
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: this.state.height}}>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: this.state.height,
+        backgroundColor: '#000',
+        color: '#fff'
+      }}>
         Hello there
       </div>
     )
