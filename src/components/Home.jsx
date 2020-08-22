@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import About from './tabs/About'
-import Hobbies from './tabs/Hobbies'
-import Projects from './tabs/Projects'
+import About from './sections/About'
+import Hobbies from './sections/Hobbies'
+import Projects from './sections/Projects'
 
 class Home extends Component {
   render() {
