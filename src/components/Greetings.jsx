@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import { withStyles } from '@material-ui/core/styles'
+
+const useStyles = (theme) => ({
+  greetings: theme.greetings
+})
 
 class Greetings extends Component {
   constructor() {
@@ -6,6 +11,7 @@ class Greetings extends Component {
     this.state = {}
     this.updateWindowHeight = this.updateWindowHeight.bind(this);
   }
+
   componentDidMount() {
       this.updateWindowHeight();
       window.addEventListener("resize", this.updateWindowHeight.bind(this));
@@ -16,20 +22,15 @@ class Greetings extends Component {
   updateWindowHeight() {
       this.setState({ height: window.innerHeight });
   }
+
   render() {
+    const { classes } = this.props
     return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: this.state.height,
-        backgroundColor: '#000',
-        color: '#fff'
-      }}>
+      <div style={ { height: this.state.height } } className={ classes.greetings }>
         Hello there
       </div>
     )
   }
 }
 
-export default Greetings
+export default withStyles(useStyles)(Greetings)
