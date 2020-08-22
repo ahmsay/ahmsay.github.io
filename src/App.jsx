@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { Container } from '@material-ui/core'
 import Greetings from './components/Greetings'
+import MainContent from './components/MainContent'
 
 const theme = createMuiTheme({
   card: {
@@ -31,7 +32,7 @@ class App extends Component {
       <MuiThemeProvider theme={ theme }>
         <Greetings/>
         <Container fixed>
-          
+          <MainContent/>
         </Container>
       </MuiThemeProvider>
     )
