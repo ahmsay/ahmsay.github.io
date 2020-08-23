@@ -1,7 +1,7 @@
 const initState = {
   sections: {
     about: {
-      mainTitle: 'Hello There !',
+      mainTitle: 'Who am I ?',
       mainContent: 'My name is Ahmet. I was born in Eskişehir. I am graduated from Anadolu University and living in Ankara, Turkey. I work at TÜBİTAK (Scientific and Technological Research Council of Turkey) as a software developer. I am interested in devops and microservices architecture.',
       whatElse: {
         title: 'What Else ?',
