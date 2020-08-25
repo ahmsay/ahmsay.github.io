@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import { CardActions, Button, Card, CardContent, Typography, Grid, Container } from '@material-ui/core'
+import { CardActions, Button, Card, CardContent, Typography, Grid, Container, Box } from '@material-ui/core'
 
 const useStyles = (theme) => ({
   card: theme.card
@@ -17,7 +17,7 @@ class Projects extends Component {
           <Card align="justify">
             <CardContent>
               <Typography variant="subtitle1">
-                { project.title }
+                <Box fontWeight="fontWeightMedium">{ project.title }</Box>
               </Typography>
               <Typography variant="body2">
                 { project.detail }
@@ -34,7 +34,7 @@ class Projects extends Component {
       <Container fixed>
         <Card className={ classes.card } variant="outlined">
           <CardContent>
-            <Typography variant="h5" align="center">
+            <Typography variant="h4" align="center">
               { mainTitle }
             </Typography><br/>
             <Grid container spacing={3}>

@@ -13,7 +13,7 @@ const About = ({ aboutContent }) => {
     <Container maxWidth="md">
       <Card className={ classes.card } variant="outlined" align="center">
         <CardContent>
-          <Typography variant="h5">
+          <Typography variant="h4">
             { mainTitle }
           </Typography><br/>
           <Typography variant="body2">

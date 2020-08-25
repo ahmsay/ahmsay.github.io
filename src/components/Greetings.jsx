@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
+import { Typography } from '@material-ui/core'
 
 const useStyles = (theme) => ({
   greetings: theme.greetings
@@ -27,7 +28,9 @@ class Greetings extends Component {
     const { classes } = this.props
     return (
       <div style={ { height: this.state.height } } className={ classes.greetings }>
-        Hello there
+        <Typography variant="h2">
+          Hello there
+        </Typography>
       </div>
     )
   }
