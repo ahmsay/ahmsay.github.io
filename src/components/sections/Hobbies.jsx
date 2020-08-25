@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Card, CardContent, Typography, Grid, Icon } from '@material-ui/core'
+import { Card, CardContent, Typography, Grid, Icon, Container } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   card: theme.card
@@ -40,14 +40,16 @@ const Hobbies = ({ hobbiesContent }) => {
     )
   })
   return (
-    <Card className={ classes.card } variant="outlined" align="justify">
-      <CardContent>
-        <Typography variant="h5">
-          { mainTitle }
-        </Typography><br/>
-        { hobbies }
-      </CardContent>
-    </Card>
+    <Container maxWidth="sm">
+      <Card className={ classes.card } variant="outlined" align="justify">
+        <CardContent>
+          <Typography variant="h5">
+            { mainTitle }
+          </Typography><br/>
+          { hobbies }
+        </CardContent>
+      </Card>
+    </Container>
   )
 }
 

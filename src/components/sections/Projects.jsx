@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import { CardActions, Button, Card, CardContent, Typography, Grid } from '@material-ui/core'
+import { CardActions, Button, Card, CardContent, Typography, Grid, Container } from '@material-ui/core'
 
 const useStyles = (theme) => ({
   card: theme.card
@@ -31,17 +31,19 @@ class Projects extends Component {
       )
     })
     return (
-      <Card className={ classes.card } variant="outlined" align="justify">
-        <CardContent>
-          <Typography variant="h5">{ mainTitle }</Typography><br/>
-          <Grid container spacing={3}>
-            { projectListProcessed }
-          </Grid>
-        </CardContent>
-        <CardActions style={{ paddingTop: 0 }}>
-          <Button onClick={ () => { window.open( "https://github.com/ahmsay?tab=repositories", "_blank") } } style={{ marginLeft: 4 }} size="small">See Other Projects</Button>
-        </CardActions>
-      </Card>
+      <Container fixed>
+        <Card className={ classes.card } variant="outlined" align="justify">
+          <CardContent>
+            <Typography variant="h5">{ mainTitle }</Typography><br/>
+            <Grid container spacing={3}>
+              { projectListProcessed }
+            </Grid>
+          </CardContent>
+          <CardActions style={{ paddingTop: 0 }}>
+            <Button onClick={ () => { window.open( "https://github.com/ahmsay?tab=repositories", "_blank") } } style={{ marginLeft: 4 }} size="small">See Other Projects</Button>
+          </CardActions>
+        </Card>
+      </Container>
     )
   }
 }
