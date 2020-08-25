@@ -11,7 +11,7 @@ const About = ({ aboutContent }) => {
   const { mainTitle, mainContent, whatElse, developerMessage } = aboutContent
   return (
     <Container maxWidth="md">
-      <Card className={ classes.card } variant="outlined" align="justify">
+      <Card className={ classes.card } variant="outlined" align="center">
         <CardContent>
           <Typography variant="h5">
             { mainTitle }

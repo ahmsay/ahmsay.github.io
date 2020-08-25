@@ -14,7 +14,7 @@ class Projects extends Component {
     const projectListProcessed = projectList.map((project, index) => {
       return (
         <Grid item xs={12} sm={6} md={3} key={ index }>
-          <Card>
+          <Card align="justify">
             <CardContent>
               <Typography variant="subtitle1">
                 { project.title }
@@ -32,9 +32,11 @@ class Projects extends Component {
     })
     return (
       <Container fixed>
-        <Card className={ classes.card } variant="outlined" align="justify">
+        <Card className={ classes.card } variant="outlined">
           <CardContent>
-            <Typography variant="h5">{ mainTitle }</Typography><br/>
+            <Typography variant="h5" align="center">
+              { mainTitle }
+            </Typography><br/>
             <Grid container spacing={3}>
               { projectListProcessed }
             </Grid>

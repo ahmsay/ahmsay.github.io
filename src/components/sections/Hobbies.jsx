@@ -43,7 +43,7 @@ const Hobbies = ({ hobbiesContent }) => {
     <Container maxWidth="sm">
       <Card className={ classes.card } variant="outlined" align="justify">
         <CardContent>
-          <Typography variant="h5">
+          <Typography variant="h5" align="center">
             { mainTitle }
           </Typography><br/>
           { hobbies }
