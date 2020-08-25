@@ -9,9 +9,13 @@ class Home extends Component {
     const { sections } = this.props
     return (
       <div>
+        <br/><br/><br/><br/>
         <About aboutContent={ sections.about }/>
+        <br/><br/><br/><br/>
         <Hobbies hobbiesContent={ sections.hobbies }/>
+        <br/><br/><br/><br/>
         <Projects projectsContent={ sections.projects }/>
+        <br/><br/><br/><br/>
       </div>
     )
   }
