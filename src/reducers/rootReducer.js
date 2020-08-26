@@ -2,13 +2,13 @@ const initState = {
   sections: {
     about: {
       mainTitle: 'Who am I ?',
-      mainContent: 'My name is Ahmet. I was born in Eskişehir. I am graduated from Anadolu University and living in Ankara, Turkey. I work at TÜBİTAK (Scientific and Technological Research Council of Turkey) as a software developer. I am interested in devops and microservices architecture.',
+      mainContent: 'My name is Ahmet. I was born in Eskişehir. I am graduated from Anadolu University and living in Ankara, Turkey. I am working at TÜBİTAK (Scientific and Technological Research Council of Turkey) as a software developer. I am interested in devops and microservices architecture.',
       whatElse: {
         title: 'What Else ?',
-        content: 'Well, I like go kart, watching movies and tv series, listening eurobeat, playing video games, table football, billiard, drawing, drinking tea. I am really interested in space related topics and wild nature. Tiger is my favorite animal. Besides work, I also code some stuff to learn and improve myself.'
+        content: 'Well, I like go kart, watching movies, tv series and documentaries, listening eurobeat, playing video games, table football, billiard, drawing, drinking tea. I am really interested in space related topics and wild nature. Tiger is my favorite animal. Besides work, I also code some stuff to learn and improve myself.'
       },
       developerMessage: {
-        title: 'For Those Who Wants to be a Software Developer',
+        title: 'For Those Who Want to be a Software Developer',
         content: 'There are tons of materials on internet that can guide you, help you to solve the problem you stuck and improve your skills. All you need is a desire to learn. I know this sounds like a cliche but it is the truth.'
       },
       forMore: {
@@ -34,22 +34,22 @@ const initState = {
       projectList: [
         {
           title: 'Churnify',
-          detail: "This is a churn analysis automation tool. Churn refers to customer's turnover rate. Predicting which customer is going to leave the company is known as 'Churn Analysis'. So the aim is to predict which customer is going to leave the company and take precautions about it. The motivation is to automatize this process.",
+          detail: "This is a churn analysis automation tool. Predicting which customer is going to leave the company is known as 'Churn Analysis'. So the aim is to predict which customer is going to leave the company and take precautions about it. The motivation is to automatize this process.",
           link: 'https://churn-2537f.firebaseapp.com/'
         },
         {
           title: 'Star Wars Quick Guide',
-          detail: "This mobile application provides information about movies, characters, planets, species, starships and vehicles in Star Wars legend universe. It is built with Xamarin Forms.",
+          detail: "This mobile application provides information about movies, characters, planets, species, starships and vehicles in Star Wars expanded universe, also known as the legend universe. It is built with Xamarin Forms and also compatible with android and iOS.",
           link: 'https://github.com/ahmsay/Star-Wars-Quick-Guide'
         },
         {
           title: 'Spring Boot Microservices',
-          detail: "This demo project contains basic concepts about microservices architecture like communication, service discovery, fault tolerance, resilience and configuration.",
-          link: 'https://github.com/ahmsay/Spring-Boot-Microservices'
+          detail: "This is an online shopping application project built with Spring Boot and microservices architecture. It has four client services, a discovery server and a configuration server for global configuration and dynamic updates. The application is also ready to run with docker.",
+          link: 'https://github.com/ahmsay/Online-Shopping-Application'
         },
         {
           title: 'Number Guess',
-          detail: "This simple application provides you an interface to draw a number. Then if you click 'Predict', it sends the number you draw to a pre-trained machine learning model to predict which number it is. I hope you get the correct result when you try.",
+          detail: "This simple application provides you an interface to draw a number. Then if you click 'Predict', it sends the number you draw to a pre-trained machine learning model to predict which number it is. The model is a convolutional neural network which runs in a python flask app.",
           link: 'https://number-guess-conv.web.app/'
         }
       ]
