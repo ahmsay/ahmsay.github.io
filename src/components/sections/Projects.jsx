@@ -14,7 +14,7 @@ class Projects extends Component {
     const projectListProcessed = projectList.map((project, index) => {
       return (
         <Grid item xs={12} sm={6} md={3} key={ index }>
-          <Card align="justify" style={{ height: '100%' }}>
+          <Card align="justify" variant="outlined" style={{ height: '100%', borderWidth: 0 }}>
             <CardContent>
               <Typography variant="subtitle1">
                 <Box fontWeight="fontWeightMedium">{ project.title }</Box>
@@ -43,7 +43,7 @@ class Projects extends Component {
           </CardContent>
         </Card>
         <Box display="flex" justifyContent="center">
-          <Button onClick={ () => { window.open( "https://github.com/ahmsay?tab=repositories", "_blank") } } style={{ marginLeft: 4 }} size="small">
+          <Button onClick={ () => { window.open( "https://github.com/ahmsay?tab=repositories", "_blank") } }>
             See Other Projects
           </Button>
         </Box>
