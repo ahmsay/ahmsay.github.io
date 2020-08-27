@@ -18,12 +18,10 @@ const theme = createMuiTheme({
     paddingLeft: 12,
     paddingRight: 12 
   },
-  greetings: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+  greetingsCard: {
     backgroundColor: '#000',
-    color: '#fff'
+    color: '#fff',
+    borderWidth: 0
   }
 })
 

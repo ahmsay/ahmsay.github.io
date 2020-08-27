@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import { Typography } from '@material-ui/core'
+import { Typography, Grid, Card, CardContent } from '@material-ui/core'
 
 const useStyles = (theme) => ({
-  greetings: theme.greetings
+  greetingsCard: theme.greetingsCard
 })
 
 class Greetings extends Component {
@@ -27,11 +27,15 @@ class Greetings extends Component {
   render() {
     const { classes } = this.props
     return (
-      <div style={ { height: this.state.height } } className={ classes.greetings }>
-        <Typography variant="h2">
-          Hello there
-        </Typography>
-      </div>
+      <Grid style={ { height: this.state.height, backgroundColor: '#000' } } container justify="center" alignItems="center">
+        <Card variant="outlined" className={ classes.greetingsCard }>
+          <CardContent>
+            <Typography variant="h2" align="center">
+              Hello there
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
     )
   }
 }
