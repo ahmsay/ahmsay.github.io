@@ -2,14 +2,14 @@ const initState = {
   sections: {
     about: {
       mainTitle: 'Who am I ?',
-      mainContent: 'My name is Ahmet. I was born in Eskişehir. I am graduated from Anadolu University and living in Ankara, Turkey. I am working at TÜBİTAK (Scientific and Technological Research Council of Turkey) as a software developer. I am interested in devops and microservices architecture.',
+      mainContent: 'My name is Ahmet. I was born in Eskişehir. I am graduated from Anadolu University, department of computer engineering and living in Ankara, Turkey. I am working at TÜBİTAK (Scientific and Technological Research Council of Turkey) as a software developer. I am interested in devops and microservices architecture.',
       whatElse: {
         title: 'What Else ?',
-        content: 'Well, I like go kart, watching movies, tv series and documentaries, listening eurobeat, playing video games, table football, billiard, drawing, drinking tea. I am really interested in space related topics and wild nature. Tiger is my favorite animal. Besides work, I also code some stuff to learn and improve myself.'
+        content: "Well, I like go kart, watching movies, tv series and documentaries, listening eurobeat, spending time on 9gag, playing video games, table football, billiard, drawing, drinking tea, cold weather and cities with beautiful, historical architecture. What I don't like is jazz, summer, coffee (not kidding) and applications with too many ads. I am really interested in space related topics and wild nature. Tiger is my favorite animal. Besides work, I also code some stuff to learn and improve myself."
       },
       developerMessage: {
         title: 'For Those Who Want to be a Software Developer',
-        content: 'There are tons of materials on internet that can guide you, help you to solve the problem you stuck and improve your skills. All you need is a desire to learn. I know this sounds like a cliche but it is the truth.'
+        content: "There are tons of materials on internet that can guide you, help you to solve the problem you stuck and improve your skills. All you need is a desire to learn. I know this sounds like a cliche but it is the truth. So if you have any interest about software development, don't wait anymore and just start searching."
       },
       forMore: {
         title: 'For More',
