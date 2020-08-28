@@ -9,8 +9,8 @@ class Footer extends Component {
       return (
         <Grid item md={3} key={ index }>
           <Box display="flex" justifyContent="center">
-            <IconButton style={{ color: '#fff' }}>
-              <AlarmIcon onClick={ () => { window.open(account.link, "_blank") } }/>
+            <IconButton style={{ color: '#fff' }} onClick={ () => { window.open(account.link, "_blank") } }>
+              <AlarmIcon/>
             </IconButton>
           </Box>
         </Grid>
