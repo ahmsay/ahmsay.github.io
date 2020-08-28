@@ -1,23 +1,26 @@
 import React, { Component } from 'react'
-import { Grid, Container, Box } from '@material-ui/core'
+import { Grid, Container, Box, IconButton } from '@material-ui/core'
+import AlarmIcon from '@material-ui/icons/Alarm'
 
 class Footer extends Component {
   render() {
     const { footerContent } = this.props
-    const links = footerContent.accounts.map((account, index) => {
+    const icons = footerContent.accounts.map((account, index) => {
       return (
         <Grid item md={3} key={ index }>
           <Box display="flex" justifyContent="center">
-            { account.name }
+            <IconButton style={{ color: '#fff' }}>
+              <AlarmIcon onClick={ () => { window.open(account.link, "_blank") } }/>
+            </IconButton>
           </Box>
         </Grid>
       )
     })
     return (
       <div style={{ backgroundColor: '#000', color: '#fff' }}>
-        <Container fixed>
-          <Grid container spacing={4}>
-            { links }
+        <Container maxWidth="sm">
+          <Grid container justify="center">
+            { icons }
           </Grid>
         </Container>
       </div>
