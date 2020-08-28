@@ -10,14 +10,6 @@ const initState = {
       developerMessage: {
         title: 'For Those Who Want to be a Software Developer',
         content: "There are tons of materials on internet that can guide you, help you to solve the problem you stuck and improve your skills. All you need is a desire to learn. I know this sounds like a cliche but it is the truth. So if you have any interest about software development, don't wait anymore and just start searching."
-      },
-      forMore: {
-        title: 'For More',
-        links: [
-          { name: 'LinkedIn', href: 'https://tr.linkedin.com/in/ahmet-say-769485120' },
-          { name: 'GitHub', href: 'https://github.com/ahmsay' },
-          { name: 'Instagram', href: 'https://www.instagram.com/ahmsay26/' }
-        ]
       }
     },
     hobbies: {
@@ -54,6 +46,14 @@ const initState = {
         }
       ]
     }
+  },
+  footer: {
+    accounts: [
+      { name: 'GitHub', href: 'https://github.com/ahmsay' },
+      { name: 'LinkedIn', href: 'https://tr.linkedin.com/in/ahmet-say-769485120' },
+      { name: 'HackerRank', href: 'https://www.hackerrank.com/ahmsay' },
+      { name: 'Instagram', href: 'https://www.instagram.com/ahmsay26/' }
+    ]
   }
 }
 

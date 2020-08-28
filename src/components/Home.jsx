@@ -7,7 +7,7 @@ import Footer from './Footer'
 
 class Home extends Component {
   render() {
-    const { sections } = this.props
+    const { sections, footerContent } = this.props
     return (
       <div>
         <br/><br/><br/><br/>
@@ -17,7 +17,7 @@ class Home extends Component {
         <br/><br/><br/><br/>
         <Projects projectsContent={ sections.projects }/>
         <br/><br/><br/><br/>
-        <Footer/>
+        <Footer footerContent={ footerContent }/>
       </div>
     )
   }
@@ -25,7 +25,8 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    sections: state.sections
+    sections: state.sections,
+    footerContent: state.footer
   }
 }
 
