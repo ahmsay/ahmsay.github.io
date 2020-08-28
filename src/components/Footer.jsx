@@ -18,11 +18,13 @@ class Footer extends Component {
     })
     return (
       <div style={{ backgroundColor: '#000', color: '#fff' }}>
+        <br/><br/>
         <Container maxWidth="sm">
           <Grid container justify="center">
             { icons }
           </Grid>
         </Container>
+        <br/><br/>
       </div>
     )
   }

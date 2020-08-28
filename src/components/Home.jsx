@@ -16,7 +16,7 @@ class Home extends Component {
         <Hobbies hobbiesContent={ sections.hobbies }/>
         <br/><br/><br/><br/>
         <Projects projectsContent={ sections.projects }/>
-        <br/><br/><br/><br/>
+        <br/><br/>
         <Footer footerContent={ footerContent }/>
       </div>
     )
