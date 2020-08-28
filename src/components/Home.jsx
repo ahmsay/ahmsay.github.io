@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import About from './sections/About'
 import Hobbies from './sections/Hobbies'
 import Projects from './sections/Projects'
+import Footer from './Footer'
 
 class Home extends Component {
   render() {
@@ -16,6 +17,7 @@ class Home extends Component {
         <br/><br/><br/><br/>
         <Projects projectsContent={ sections.projects }/>
         <br/><br/><br/><br/>
+        <Footer/>
       </div>
     )
   }
