@@ -49,10 +49,10 @@ const initState = {
   },
   footer: {
     accounts: [
-      { name: 'GitHub', link: 'https://github.com/ahmsay' },
-      { name: 'LinkedIn', link: 'https://tr.linkedin.com/in/ahmet-say-769485120' },
-      { name: 'HackerRank', link: 'https://www.hackerrank.com/ahmsay' },
-      { name: 'Instagram', link: 'https://www.instagram.com/ahmsay26/' }
+      { name: 'GitHub', link: 'https://github.com/ahmsay', icon: 'github.png' },
+      { name: 'LinkedIn', link: 'https://tr.linkedin.com/in/ahmet-say-769485120', icon: 'linkedin.png' },
+      { name: 'HackerRank', link: 'https://www.hackerrank.com/ahmsay', icon: 'hackerrank.png' },
+      { name: 'Instagram', link: 'https://www.instagram.com/ahmsay26/', icon: 'instagram.png' }
     ]
   }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Grid, Container, Box, IconButton } from '@material-ui/core'
-import AlarmIcon from '@material-ui/icons/Alarm'
 
 class Footer extends Component {
   render() {
@@ -10,7 +9,7 @@ class Footer extends Component {
         <Grid item md={3} key={ index }>
           <Box display="flex" justifyContent="center">
             <IconButton style={{ color: '#fff' }} onClick={ () => { window.open(account.link, "_blank") } }>
-              <AlarmIcon/>
+              <img src={require('../images/' + account.icon)} alt={ account.name } width="30" height="30"/>
             </IconButton>
           </Box>
         </Grid>
