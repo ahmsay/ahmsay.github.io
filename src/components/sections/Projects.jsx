@@ -4,7 +4,8 @@ import { CardActions, Button, Card, CardContent, Typography, Grid, Container, Bo
 
 const useStyles = makeStyles((theme) => ({
   mainCard: theme.mainCard,
-  projectCard: theme.projectCard
+  projectCard: theme.projectCard,
+  button: theme.button
 }))
 
 const Projects = ({ projectsContent }) => {
@@ -23,7 +24,7 @@ const Projects = ({ projectsContent }) => {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button onClick={ () => { window.open( project.link, "_blank") } } size="small">More</Button>
+            <Button className={ classes.button } onClick={ () => { window.open( project.link, "_blank") } } size="small">More</Button>
           </CardActions>
         </Card>
       </Grid>
@@ -42,7 +43,7 @@ const Projects = ({ projectsContent }) => {
         </CardContent>
       </Card>
       <Box display="flex" justifyContent="center">
-        <Button onClick={ () => { window.open( "https://github.com/ahmsay?tab=repositories", "_blank") } }>
+        <Button className={ classes.button } onClick={ () => { window.open( "https://github.com/ahmsay?tab=repositories", "_blank") } }>
           See Other Projects
         </Button>
       </Box>

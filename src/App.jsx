@@ -5,17 +5,19 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import { connect } from 'react-redux'
 
-const primary = '#000'
+const primary = '#010623'
 const secondary = '#fff'
 
 const theme = createMuiTheme({
   mainCard: {
     borderWidth: 0,
-    padding: 7
+    padding: 7,
+    color: primary
   },
   projectCard: {
     borderWidth: 0,
-    height: '100%'
+    height: '100%',
+    color: primary
   },
   greetingsCard: {
     borderWidth: 0,
@@ -28,6 +30,9 @@ const theme = createMuiTheme({
   },
   iconButton: {
     color: secondary
+  },
+  button: {
+    color: primary
   }
 })
 
