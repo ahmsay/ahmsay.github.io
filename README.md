@@ -1,2 +1,2 @@
 This is my personal website.
-ahmsay.github.io/site
+https://ahmsay.github.io/site/
