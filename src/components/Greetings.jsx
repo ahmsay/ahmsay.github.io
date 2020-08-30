@@ -26,16 +26,19 @@ class Greetings extends Component {
 
   render() {
     const { classes } = this.props
+    let background = require('../images/background.jpg')
     return (
-      <Grid style={ { height: this.state.height, backgroundColor: '#000' } } container justify="center" alignItems="center">
-        <Card variant="outlined" className={ classes.greetingsCard }>
-          <CardContent>
-            <Typography variant="h2" align="center">
-              Hello there
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
+      <div style ={ { backgroundImage: "url(" + background + ")", backgroundSize: 'cover' } }>      
+        <Grid style={{ height: this.state.height }} container justify="center" alignItems="center">
+          <Card variant="outlined" className={ classes.greetingsCard }>
+            <CardContent>
+              <Typography variant="h2" align="center">
+                Hello there
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </div>
     )
   }
 }

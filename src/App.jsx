@@ -19,7 +19,7 @@ const theme = createMuiTheme({
     paddingRight: 12 
   },
   greetingsCard: {
-    backgroundColor: '#000',
+    backgroundColor: '#0000',
     color: '#fff',
     borderWidth: 0
   }
