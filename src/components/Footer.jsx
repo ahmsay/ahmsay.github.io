@@ -1,32 +1,36 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Grid, Container, Box, IconButton } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 
-class Footer extends Component {
-  render() {
-    const { footerContent } = this.props
-    const icons = footerContent.accounts.map((account, index) => {
-      return (
-        <Grid item md={3} key={ index }>
-          <Box display="flex" justifyContent="center">
-            <IconButton style={{ color: '#fff' }} onClick={ () => { window.open(account.link, "_blank") } }>
-              <img src={require('../images/' + account.icon)} alt={ account.name } width="30" height="30"/>
-            </IconButton>
-          </Box>
-        </Grid>
-      )
-    })
+const useStyles = makeStyles((theme) => ({
+  footer: theme.footer,
+  iconButton: theme.iconButton
+}))
+
+const Footer = ({ footerContent }) => {
+  const classes = useStyles()
+  const icons = footerContent.accounts.map((account, index) => {
     return (
-      <div style={{ backgroundColor: '#000', color: '#fff' }}>
-        <br/><br/>
-        <Container maxWidth="sm">
-          <Grid container justify="center">
-            { icons }
-          </Grid>
-        </Container>
-        <br/><br/>
-      </div>
+      <Grid item md={3} key={ index }>
+        <Box display="flex" justifyContent="center">
+          <IconButton className={ classes.iconButton } onClick={ () => { window.open(account.link, "_blank") } }>
+            <img src={require('../images/' + account.icon)} alt={ account.name } width="30" height="30"/>
+          </IconButton>
+        </Box>
+      </Grid>
     )
-  }
+  })
+  return (
+    <div className={ classes.footer }>
+      <br/><br/>
+      <Container maxWidth="sm">
+        <Grid container justify="center">
+          { icons }
+        </Grid>
+      </Container>
+      <br/><br/>
+    </div>
+  )
 }
 
 export default Footer

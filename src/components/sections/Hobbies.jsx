@@ -3,25 +3,30 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Card, CardContent, Typography, Grid, Icon, Container } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
-  card: theme.card
+  mainCard: theme.mainCard
 }))
 
 const Hobbies = ({ hobbiesContent }) => {
   const classes = useStyles()
   const { mainTitle, hobbyList } = hobbiesContent
   const hobbies = hobbyList.map((hobby, index) => {
-    let contentAtLeft = index %2 === 0
-    let marginLeft = contentAtLeft ? 18 : 0
-    let marginRight = contentAtLeft ? 0 : 18
-    let endOfItems = index === hobbyList.length - 1
-    let hobbyIcon = (
+    const contentAtLeft = index %2 === 0
+    const marginLeft = contentAtLeft ? 18 : 0
+    const marginRight = contentAtLeft ? 0 : 18
+    const endOfItems = index === hobbyList.length - 1
+    const iconStyle = {
+      fontSize: 60,
+      marginRight,
+      marginLeft
+    }
+    const hobbyIcon = (
       <Grid item xs={3}>
         <Grid container justify="center">
-          <Icon style={{ fontSize: 60, marginRight, marginLeft }}>{ hobby.icon }</Icon>
+          <Icon style={ iconStyle }>{ hobby.icon }</Icon>
         </Grid>
       </Grid>
     )
-    let hobbyContent = (
+    const hobbyContent = (
       <Grid item xs={9}>
         <Typography variant="body2">
           { hobby.content }
@@ -41,11 +46,10 @@ const Hobbies = ({ hobbiesContent }) => {
   })
   return (
     <Container maxWidth="sm">
-      <Card className={ classes.card } variant="outlined" align="justify">
+      <Card className={ classes.mainCard } variant="outlined" align="justify">
         <CardContent>
-          <Typography variant="h4" align="center">
-            { mainTitle }
-          </Typography><br/>
+          <Typography variant="h4" align="center">{ mainTitle }</Typography>
+          <br/>
           { hobbies }
         </CardContent>
       </Card>
