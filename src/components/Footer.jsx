@@ -4,7 +4,8 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
   footer: theme.footer,
-  iconButton: theme.iconButton
+  iconButton: theme.iconButton,
+  image: theme.image
 }))
 
 const Footer = ({ footerContent }) => {
@@ -14,7 +15,7 @@ const Footer = ({ footerContent }) => {
       <Grid item md={3} key={ index }>
         <Box display="flex" justifyContent="center">
           <IconButton className={ classes.iconButton } onClick={ () => { window.open(account.link, "_blank") } }>
-            <img src={require('../images/' + account.icon)} alt={ account.name } width="30" height="30"/>
+            <img src={require('../images/' + account.icon)} alt={ account.name } className={ classes.image }/>
           </IconButton>
         </Box>
       </Grid>

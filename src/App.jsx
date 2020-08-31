@@ -33,6 +33,11 @@ const theme = createMuiTheme({
   },
   button: {
     color: primary
+  },
+  image: {
+    width: 30,
+    height: 30,
+    pointerEvents: 'none'
   }
 })
 
