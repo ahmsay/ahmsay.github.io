@@ -11,20 +11,10 @@ class Greetings extends Component {
   constructor() {
     super();
     this.state = {}
-    this.updateWindowHeight = this.updateWindowHeight.bind(this);
   }
-
   componentDidMount() {
-      this.updateWindowHeight();
-      window.addEventListener("resize", this.updateWindowHeight.bind(this));
+    this.setState({ height: window.innerHeight });
   }
-  componentWillUnmount() {
-      window.removeEventListener("resize", this.updateWindowHeight.bind(this));
-  }
-  updateWindowHeight() {
-      this.setState({ height: window.innerHeight });
-  }
-
   render() {
     const { classes, width } = this.props
     const background = require('../images/background.jpg')
