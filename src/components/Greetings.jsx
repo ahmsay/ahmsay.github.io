@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import { Typography, Grid, Card, CardContent } from '@material-ui/core'
+import withWidth from '@material-ui/core/withWidth'
 
 const useStyles = (theme) => ({
   greetingsCard: theme.greetingsCard
@@ -25,18 +26,19 @@ class Greetings extends Component {
   }
 
   render() {
-    const { classes } = this.props
+    const { classes, width } = this.props
     const background = require('../images/background.jpg')
     const greetingsStyle = {
       height: this.state.height,
       backgroundImage: "url(" + background + ")",
       backgroundSize: 'cover'
     }
+    const variant = width === 'xs' ? 'h3' : 'h2'
     return (
       <Grid style={ greetingsStyle } container justify="center" alignItems="center">
         <Card variant="outlined" className={ classes.greetingsCard }>
           <CardContent>
-            <Typography variant="h2" align="center">
+            <Typography variant={ variant } align="center">
               Hello there
             </Typography>
           </CardContent>
@@ -46,4 +48,4 @@ class Greetings extends Component {
   }
 }
 
-export default withStyles(useStyles)(Greetings)
+export default withWidth()(withStyles(useStyles)(Greetings))
