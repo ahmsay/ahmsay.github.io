@@ -14,41 +14,6 @@ const theme = createMuiTheme({
     padding: 7,
     color: primary
   },
-  projectCard: {
-    borderWidth: 0,
-    height: '100%',
-    color: primary
-  },
-  greetingsCard: {
-    borderWidth: 0,
-    backgroundColor: '#0000',
-    color: secondary
-  },
-  hobbiesCard: {
-    borderWidth: 0,
-    backgroundColor: primary,
-    color: secondary
-  },
-  about: {
-    paddingTop: '84px',
-    paddingBottom: '42px'
-  },
-  projects: {
-    paddingTop: '42px',
-    paddingBottom: '42px'
-  },
-  hobbies: {
-    backgroundColor: primary,
-    color: secondary,
-    paddingTop: '42px',
-    paddingBottom: '42px'
-  },
-  footer: {
-    backgroundColor: primary,
-    color: secondary,
-    paddingTop: '42px',
-    paddingBottom: '42px'
-  },
   iconButton: {
     color: secondary
   },
@@ -59,6 +24,41 @@ const theme = createMuiTheme({
     width: 30,
     height: 30,
     pointerEvents: 'none'
+  },
+  greetingsCard: {
+    borderWidth: 0,
+    backgroundColor: '#0000',
+    color: secondary
+  },
+  about: {
+    paddingTop: '84px',
+    paddingBottom: '42px'
+  },
+  hobbies: {
+    backgroundColor: primary,
+    color: secondary,
+    paddingTop: '42px',
+    paddingBottom: '42px'
+  },
+  hobbiesCard: {
+    borderWidth: 0,
+    backgroundColor: primary,
+    color: secondary
+  },
+  projects: {
+    paddingTop: '42px',
+    paddingBottom: '42px'
+  },
+  projectCard: {
+    borderWidth: 0,
+    height: '100%',
+    color: primary
+  },
+  footer: {
+    backgroundColor: primary,
+    color: secondary,
+    paddingTop: '42px',
+    paddingBottom: '42px'
   }
 })
 
