@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Card, CardContent, Typography, Grid, Icon, Container } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
-  mainCard: theme.mainCard
+  mainCard: theme.mainCard,
+  hobbies: theme.hobbies,
+  hobbiesCard: theme.hobbiesCard
 }))
 
 const Hobbies = ({ hobbiesContent }) => {
@@ -45,15 +47,17 @@ const Hobbies = ({ hobbiesContent }) => {
     )
   })
   return (
-    <Container maxWidth="sm">
-      <Card className={ classes.mainCard } variant="outlined" align="justify">
-        <CardContent>
-          <Typography variant="h4" align="center">{ mainTitle }</Typography>
-          <br/>
-          { hobbies }
-        </CardContent>
-      </Card>
-    </Container>
+    <div className={ classes.hobbies }>
+      <Container maxWidth="sm">
+        <Card className={ classes.hobbiesCard } variant="outlined" align="justify">
+          <CardContent>
+            <Typography variant="h4" align="center">{ mainTitle }</Typography>
+            <br/>
+            { hobbies }
+          </CardContent>
+        </Card>
+      </Container>
+    </div>
   )
 }
 

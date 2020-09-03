@@ -24,9 +24,30 @@ const theme = createMuiTheme({
     backgroundColor: '#0000',
     color: secondary
   },
-  footer: {
+  hobbiesCard: {
+    borderWidth: 0,
     backgroundColor: primary,
     color: secondary
+  },
+  about: {
+    paddingTop: '84px',
+    paddingBottom: '42px'
+  },
+  projects: {
+    paddingTop: '42px',
+    paddingBottom: '42px'
+  },
+  hobbies: {
+    backgroundColor: primary,
+    color: secondary,
+    paddingTop: '42px',
+    paddingBottom: '42px'
+  },
+  footer: {
+    backgroundColor: primary,
+    color: secondary,
+    paddingTop: '42px',
+    paddingBottom: '42px'
   },
   iconButton: {
     color: secondary

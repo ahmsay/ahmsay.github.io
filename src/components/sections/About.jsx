@@ -3,14 +3,15 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Card, CardContent, Typography, Box, Container } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
-  mainCard: theme.mainCard
+  mainCard: theme.mainCard,
+  about: theme.about
 }))
 
 const About = ({ aboutContent }) => {
   const classes = useStyles()
   const { mainTitle, mainContent, whatElse, developerMessage } = aboutContent
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" className={ classes.about }>
       <Card className={ classes.mainCard } variant="outlined" align="center">
         <CardContent>
           <Typography variant="h4">{ mainTitle }</Typography>

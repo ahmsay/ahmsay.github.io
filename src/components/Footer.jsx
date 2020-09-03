@@ -23,13 +23,11 @@ const Footer = ({ footerContent }) => {
   })
   return (
     <div className={ classes.footer }>
-      <br/><br/>
       <Container maxWidth="sm">
         <Grid container justify="center">
           { icons }
         </Grid>
       </Container>
-      <br/><br/>
     </div>
   )
 }

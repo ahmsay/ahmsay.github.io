@@ -5,7 +5,8 @@ import { CardActions, Button, Card, CardContent, Typography, Grid, Container, Bo
 const useStyles = makeStyles((theme) => ({
   mainCard: theme.mainCard,
   projectCard: theme.projectCard,
-  button: theme.button
+  button: theme.button,
+  projects: theme.projects
 }))
 
 const Projects = ({ projectsContent }) => {
@@ -31,7 +32,7 @@ const Projects = ({ projectsContent }) => {
     )
   })
   return (
-    <Container fixed>
+    <Container fixed className={ classes.projects }>
       <Card className={ classes.mainCard } variant="outlined">
         <CardContent>
           <Typography variant="h4" align="center">

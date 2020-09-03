@@ -7,13 +7,9 @@ import Projects from './sections/Projects'
 const Home = ({ sections }) => {
   return (
     <div>
-      <br/><br/><br/><br/>
       <About aboutContent={ sections.about }/>
-      <br/><br/><br/><br/>
       <Hobbies hobbiesContent={ sections.hobbies }/>
-      <br/><br/><br/><br/>
       <Projects projectsContent={ sections.projects }/>
-      <br/><br/>
     </div>
   )
 }
