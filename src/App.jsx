@@ -5,7 +5,7 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import { connect } from 'react-redux'
 
-const primary = '#00063d'
+const primary = '#010a26'
 const secondary = '#fff'
 
 const theme = createMuiTheme({
