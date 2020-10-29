@@ -25,6 +25,11 @@ const initState = {
       mainTitle: 'My Projects',
       projectList: [
         {
+          title: 'Microshop',
+          detail: "This is an online shopping application project built with Spring Boot and microservices architecture. It has four client services, a discovery server and a configuration server for global configuration and dynamic updates. The application is also ready to run with docker.",
+          link: 'https://github.com/ahmsay/Microshop'
+        },
+        {
           title: 'Churnify',
           detail: "This is a churn analysis automation tool. Predicting which customer is going to leave the company is known as 'Churn Analysis'. So the aim is to predict which customer is going to leave the company and take precautions about it. The motivation is to automatize this process.",
           link: 'https://churn-2537f.firebaseapp.com/'
@@ -34,11 +39,7 @@ const initState = {
           detail: "This mobile application provides information about movies, characters, planets, species, starships and vehicles in Star Wars expanded universe, also known as the legend universe. It is built with Xamarin Forms and also compatible with android and iOS.",
           link: 'https://github.com/ahmsay/Star-Wars-Quick-Guide'
         },
-        {
-          title: 'Spring Boot Microservices',
-          detail: "This is an online shopping application project built with Spring Boot and microservices architecture. It has four client services, a discovery server and a configuration server for global configuration and dynamic updates. The application is also ready to run with docker.",
-          link: 'https://github.com/ahmsay/Online-Shopping-Application'
-        },
+      
         {
           title: 'Number Guess',
           detail: "This simple application provides you an interface to draw a number. Then if you click 'Predict', it sends the number you draw to a pre-trained machine learning model to predict which number it is. The model is a convolutional neural network which runs in a python flask app.",
