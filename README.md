@@ -8,3 +8,5 @@ https://ahmsay.github.io/site/
 `npm start`
 ### Build
 `npm run build`
+### Deploy
+`npm run deploy`
